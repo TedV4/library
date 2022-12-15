@@ -1,1 +1,2 @@
 # library
+The goal of this project is to create a simple library app that allows users to track books they have or have not read. The purpose of this exercise is to gain experience using prototypes and objects.
