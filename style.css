@@ -19,6 +19,14 @@ header {
     padding: .5em;
 }
 
+.add-book {
+   font-size: 1em;
+   padding: 1em;
+   align-self: center;
+   margin-top: 1em;
+   cursor: pointer;
+}
+
 .main-content {
     display: flex;
     justify-content: center;
