@@ -27,12 +27,12 @@ function Book(title, author, pages, read) {
 //Open and close Add-book form
 function openForm() {
   document.getElementById("form").style.display = "block";
-  document.querySelector('.main-content').style.opacity = '0.1';
+  document.querySelector(".main-content").style.opacity = "0.1";
 }
 
 function closeForm() {
   document.getElementById("form").style.display = "none";
-  document.querySelector('.main-content').style.opacity = 1;
+  document.querySelector(".main-content").style.opacity = 1;
 }
 
 let openFormButton = document.querySelector(".open-book-form");
@@ -59,6 +59,7 @@ function addBookToLibrary() {
     container.appendChild(newBook);
     closeForm();
   }
+  document.querySelector('.form-container').reset();
 }
 
 let submitButton = document.querySelector(".submit-btn");
