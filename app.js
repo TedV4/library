@@ -24,6 +24,24 @@ function Book(title, author, pages, read) {
     this.read = false;
 }
 
+function openForm() {
+    document.getElementById('form').style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById('form').style.display = "none";
+}
+
+let openFormButton = document.querySelector('.open-book-form');
+openFormButton.addEventListener('click', function() {
+    openForm();
+});
+
+let closeFormButton = document.querySelector('.cancel-btn');
+closeFormButton.addEventListener('click', function() {
+    closeForm();
+})
+
 function addBookToLibrary() {
 
 }
