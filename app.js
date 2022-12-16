@@ -42,6 +42,7 @@ openFormButton.addEventListener("click", function () {
 
 let closeFormButton = document.querySelector(".cancel-btn");
 closeFormButton.addEventListener("click", function () {
+  document.querySelector(".form-container").reset();
   closeForm();
 });
 
@@ -59,7 +60,7 @@ function addBookToLibrary() {
     container.appendChild(newBook);
     closeForm();
   }
-  document.querySelector('.form-container').reset();
+  document.querySelector(".form-container").reset();
 }
 
 let submitButton = document.querySelector(".submit-btn");
