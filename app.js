@@ -13,9 +13,17 @@ let prey = {
   read: false,
 };
 
+let warAndPeace = {
+  title: "War and Peace",
+  author: "Leo Tolstoy",
+  pages: 1225,
+  read: true,
+};
+
 let container = document.querySelector(".grid-container");
 
-let library = [oil, prey];
+let sampleLibrary = [oil, prey, warAndPeace];
+let library = [];
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -55,9 +63,7 @@ function addBookToLibrary() {
   if (title !== "" && author !== "" && pages !== "") {
     let book = new Book(title, author, pages, read);
     library.push(book);
-    let newBook = document.createElement("div");
-    newBook.textContent = `${book.title} by ${book.author}, ${book.pages}pgs.`;
-    container.appendChild(newBook);
+    displayLibrary();
     closeForm();
   }
   document.querySelector(".form-container").reset();
@@ -70,11 +76,53 @@ submitButton.addEventListener("click", function () {
 });
 
 function displayLibrary() {
-  for (let i = 0; i < library.length; i++) {
+  let newBook = document.createElement("div");
+  let latestAddition = library[library.length - 1];
+
+  let title = document.createElement("p");
+  title.textContent = latestAddition.title;
+
+  let author = document.createElement("p");
+  author.textContent = latestAddition.author;
+
+  let pages = document.createElement("p");
+  pages.textContent = `${latestAddition.pages} pages`;
+
+  let readBtn = document.createElement("button");
+  if (latestAddition.read === true) {
+    readBtn.textContent = "Read";
+  } else {
+    readBtn.textContent = "Unread";
+  }
+
+  newBook.append(title, author, pages, readBtn);
+  container.appendChild(newBook);
+}
+
+//display sample library
+function displaySampleLibrary() {
+  for (let i = 0; i < sampleLibrary.length; i++) {
     let newBook = document.createElement("div");
-    newBook.textContent = `${library[i].title} by ${library[i].author}, ${library[i].pages}pgs.`;
+
+    let title = document.createElement("p");
+    title.textContent = sampleLibrary[i].title;
+
+    let author = document.createElement("p");
+    author.textContent = sampleLibrary[i].author;
+
+    let pages = document.createElement("p");
+    pages.textContent = `${sampleLibrary[i].pages} pages`;
+
+    let readBtn = document.createElement("button");
+    if (sampleLibrary[i].read === true) {
+      readBtn.textContent = "Read";
+    } else {
+      readBtn.textContent = "Unread";
+    }
+
+    newBook.append(title, author, pages, readBtn);
     container.appendChild(newBook);
   }
 }
 
-displayLibrary();
+displaySampleLibrary();
