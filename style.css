@@ -20,10 +20,10 @@ header {
 }
 
 .add-book-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .open-book-form {
@@ -35,18 +35,17 @@ header {
 }
 
 .book-form {
-  display: block;
+  display: none;
   border: 3px solid #f1f1f1;
   top: 0;
-  margin-top: 7em;
-  position: fixed;
+  margin-top: 2em;
+  position: absolute;
   z-index: 9;
-  overflow: auto;
 }
 
 .form-container {
   max-width: 300px;
-  padding: 10px;
+  padding: 1em;
   background-color: white;
 }
 
@@ -78,6 +77,10 @@ header {
 
 .form-container .cancel-btn {
   background-color: red;
+}
+
+#reading-status {
+  margin-bottom: 2em;
 }
 
 button:hover {
