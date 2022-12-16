@@ -111,6 +111,7 @@ button:hover {
 .grid-container div {
   display: flex;
   flex-direction: column;
+  gap: 1em;
   background: ghostwhite;
   text-align: center;
   font-size: 2em;
@@ -118,4 +119,24 @@ button:hover {
   border: none;
   border-radius: 1em;
   box-shadow: 0 4px 2px -2px gray;
+}
+
+/* Style the title of a book */
+.grid-container div p:first-of-type{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.grid-container div button {
+    padding: .5em;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border: 2px rgb(255, 0, 0) dashed;
+    background: none;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    width: min-content;
+    align-self: center;
 }
