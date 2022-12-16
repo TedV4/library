@@ -9,11 +9,11 @@
   </head>
   <body>
     <header>My Library</header>
-    <button class="add-book">Add Book</button>
+    <div class="add-book-container">
+    <button class="open-book-form">Add Book</button>
     <div class="book-form">
       <form action="#" class="form-container">
         <h1>Add book</h1>
-
         <label for="title"><b>Title</b></label>
         <input type="text" placeholder="Enter Title" name="title" required>
 
@@ -27,9 +27,10 @@
         <input type="radio" name="reading-status" value="read">Read</input>
         <input type="radio" name="reading-status" value="unread" checked>Unread</input>
         <button type="submit" class="submit-btn">Add book</button>
-        <button type="button" class="btn-cancel">Cancel</button>
+        <button type="button" class="cancel-btn">Cancel</button>
       </form>
     </div>
+  </div>
     <div class="main-content">
       <div class="grid-container"></div>
     </div>
