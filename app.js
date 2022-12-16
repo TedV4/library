@@ -27,10 +27,12 @@ function Book(title, author, pages, read) {
 //Open and close Add-book form
 function openForm() {
   document.getElementById("form").style.display = "block";
+  document.querySelector('.main-content').style.opacity = '0.1';
 }
 
 function closeForm() {
   document.getElementById("form").style.display = "none";
+  document.querySelector('.main-content').style.opacity = 1;
 }
 
 let openFormButton = document.querySelector(".open-book-form");
@@ -51,6 +53,7 @@ function addBookToLibrary() {
 
   if (title !== "" && author !== "" && pages !== "") {
     let book = new Book(title, author, pages, read);
+    library.push(book);
     let newBook = document.createElement("div");
     newBook.textContent = `${book.title} by ${book.author}, ${book.pages}pgs.`;
     container.appendChild(newBook);
